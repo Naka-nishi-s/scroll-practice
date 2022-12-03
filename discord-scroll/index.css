@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #FFB0A8;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8EC1FF;
+}
+
+.scroll-box {
+  width: 80%;
+  height: 100%;
+  background-color: #8EC1FF;
+  position: relative;
+  text-align: center;
+}
+
+.scroll-box__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.scroll-box__title {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-box::before,
+.scroll-box::after {
+  position: absolute;
+  content: "";
+  background: url(./obake.png);
+  background-size: contain;
+  width: 30px;
+  height: 100%;
+  z-index: 2;
+}
+
+.scroll-box::before {
+  top: 0;
+  left: 0;
+}
+
+.scroll-box::after {
+  top: 0;
+  right: 0;
+}
+
+.scroll-box__data {
+  width: 70%;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.scroll-box__data p {
+  margin: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #E7FF75;
+}
